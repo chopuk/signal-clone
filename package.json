@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
+    "start": "copy environment\\environment.dev environment.js && copy appjson\\app.eas app.json && expo start",
+    "build": "copy environment\\environment.prod environment.js && copy appjson\\app.eas app.json && copy /y gitignore\\gitignore.eas .gitignore && eas build -p android --profile preview",
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
   "dependencies": {
     "expo": "~48.0.15",
+    "expo-splash-screen": "~0.18.2",
     "expo-status-bar": "~1.4.4",
+    "firebase": "^9.22.0",
     "react": "18.2.0",
     "react-native": "0.71.7"
   },
