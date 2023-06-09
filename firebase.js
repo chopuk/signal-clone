@@ -1,9 +1,10 @@
 import {initializeApp} from 'firebase/app'
 import {getFirestore} from 'firebase/firestore'
 import {getAuth} from 'firebase/auth'
+import {FIREBASE_API_KEY} from '@env'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBMZ-kAtNQRggd7zPx1SFdYGZOIh2klgys',
+  apiKey: FIREBASE_API_KEY,
   authDomain: 'signal-clone-40257.firebaseapp.com',
   projectId: 'signal-clone-40257',
   storageBucket: 'signal-clone-40257.appspot.com',
